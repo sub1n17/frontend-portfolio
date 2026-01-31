@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* color */
+    --color-bg: #0f1115;
+    --color-card: rgba(255, 255, 255, 0.08);
+    --color-text-100: #ffffff;
+    --color-text-80: #c7c9d1;
+    --color-point: #7c8cff;
+
+    /* spacing */
+    --space-4: 0.25rem;
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-40: 2.5rem;
+
+    /* section spacing */
+    --section-space: 5rem;
+    /* ㄴ> 80px */
+
+    /* radius */
+    --radius-16: 1rem;
+    --radius-20: 1.25rem;
+
+    /* font size */
+    --font-14: 0.875rem;
+    --font-16: 1rem;
+    --font-18: 1.125rem;
+    --font-20: 1.25rem;
+    --font-28: 1.75rem;
+
+    /* font weight */
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+
+    /* font-family */
+    --font-es: 'Escoredream';
+    --font-mont: "Montserrat";
+
+    /* shadow */
+    --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    /* height */
+    --height-header: 64px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+    font-family: 'Escoredream';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
 }
 
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 다크모드 */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    /* background: var(--background); */
+    /* color: var(--foreground); */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.section_inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }

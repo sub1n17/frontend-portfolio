@@ -1,0 +1,105 @@
+.hero {
+    /* min-height: calc(100vh - var(--height-header)); */
+    background: radial-gradient(circle at center,
+            rgba(235, 230, 255, 1) 0%,
+            rgba(255, 255, 255, 1) 70%);
+    padding-top: var(--height-header);
+}
+
+
+.hero_inner {
+    min-height: calc(100vh - var(--height-header));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-32);
+    gap: var(--space-32);
+
+}
+
+
+.txt_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.title_wrapper {
+    position: relative;
+}
+
+.title {
+    color: #222;
+    font-size: 7.5rem;
+    max-width: 800px;
+    font-weight: 800;
+    margin: 0 auto;
+    word-break: keep-all;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+}
+
+.folder {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.folder1 {
+    top: -180px;
+    right: 135px;
+}
+
+.folder2 {
+    top: -70px;
+    left: -15px;
+}
+
+.folder3 {
+    top: -110px;
+    right: -25px;
+}
+
+.folder4 {
+    top: 110px;
+    left: -100px;
+}
+
+.folder5 {
+    top: 85px;
+    right: 45px;
+}
+
+.folder6 {
+    bottom: -40px;
+    left: -65px;
+}
+
+.folder7 {
+    bottom: 50px;
+    right: -75px;
+}
+
+.folder8 {
+    bottom: -180px;
+    left: 150px;
+}
+
+
+.folder_txt {
+    font-size: var(--font-14);
+    font-family: var(--font-mont);
+    text-align: center;
+    margin-top: -0.875rem;
+}
+
+.summary {
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
