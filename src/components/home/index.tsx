@@ -1,5 +1,5 @@
-import IntroSection from './introSection';
-import OverViewSection from './overviewSection';
+import IntroSection from './IntroSection';
+import OverViewSection from './OverviewSection';
 import TitleSection from './HeroSection';
 
 export default function HomePage() {

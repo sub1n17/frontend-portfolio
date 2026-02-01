@@ -60,7 +60,7 @@ export default function HeroSection() {
                                     width={96}
                                     height={96}
                                 ></Image>
-                                <div className={style.folder_txt}>ALWAYS BETTER</div>
+                                <div className={style.folder_txt}>IMPROVEMENT</div>
                             </div>
                             <div className={`${style.folder6} ${style.folder}`}>
                                 <Image
@@ -89,7 +89,6 @@ export default function HeroSection() {
                                 ></Image>
                                 <div className={style.folder_txt}>PERFORMANCE</div>
                             </div>
-                            {/* 사용자 경험을 고민하며 만드는 프론트엔드 개발자 최수빈 */}
                         </div>
                     </div>
                 </div>
