@@ -3,10 +3,15 @@
 :root {
     /* color */
     --color-bg: #0f1115;
-    --color-card: rgba(255, 255, 255, 0.08);
-    --color-text-100: #ffffff;
-    --color-text-80: #c7c9d1;
-    --color-point: #7c8cff;
+    --color-card: rgba(255, 255, 255, 0.7);
+    --color-card-border: #EDEEF9;
+
+    --color-text-100: #2E3142;
+    --color-text-90: #5E637A;
+    --color-text-80: #7E8296;
+    /* --color-point: #98A1D3; */
+    --color-point: #C5C9F1;
+    --color-point-bg: #f0f2ff;
 
     /* spacing */
     --space-4: 0.25rem;
@@ -18,7 +23,7 @@
     --space-40: 2.5rem;
 
     /* section spacing */
-    --section-space: 5rem;
+    /* --section-space: 5rem; */
     /* ㄴ> 80px */
 
     /* radius */
@@ -30,7 +35,10 @@
     --font-16: 1rem;
     --font-18: 1.125rem;
     --font-20: 1.25rem;
+    --font-24: 1.5rem;
+    --font-26: 1.625rem;
     --font-28: 1.75rem;
+    --font-32: 2rem;
 
     /* font weight */
     --weight-400: 400;
@@ -45,7 +53,9 @@
     --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     /* height */
-    --height-header: 64px;
+    --height-header: 4rem;
+
+
 }
 
 @font-face {
@@ -77,7 +87,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+section {
+    padding-bottom: 12rem;
+}
 
 .section_inner {
     max-width: 1200px;

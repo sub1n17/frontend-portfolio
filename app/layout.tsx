@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Bebas_Neue, Geist, Geist_Mono, Poppins } from 'next/font/google';
+import { Bebas_Neue, Geist, Geist_Mono, JetBrains_Mono, Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/src/components/common/header';
 import Footer from '@/src/components/common/footer';
@@ -19,10 +19,16 @@ const poppins = Poppins({
     subsets: ['latin'],
     variable: '--font-pop',
 });
+
 const bebas = Bebas_Neue({
     weight: '400',
     subsets: ['latin'],
     variable: '--font-bebas',
+});
+
+const JetBrains = JetBrains_Mono({
+    subsets: ['latin'],
+    variable: '--font-jetBrains',
 });
 
 export const metadata: Metadata = {
@@ -36,7 +42,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html className={`${bebas.variable} ${poppins.variable}`}>
+        <html className={`${bebas.variable} ${poppins.variable} ${JetBrains.variable}`}>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Header></Header>
                 {children}
