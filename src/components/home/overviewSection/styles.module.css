@@ -1,0 +1,49 @@
+.overview_section {
+    position: relative;
+    /* padding: 12rem 0; */
+    overflow: hidden;
+}
+
+/* 배경에 은은한 보라색 구름 깔기 */
+.overview_section::before {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(155, 163, 235, 0.12) 0%, transparent 70%);
+    top: -100px;
+    left: -100px;
+    z-index: 0;
+}
+
+
+.title {
+    font-size: 5rem;
+    font-weight: 200;
+    color: var(--color-text-100);
+}
+
+.description {
+    word-break: keep-all;
+    max-width: 42rem;
+    line-height: 1.7;
+    color: var(--color-text-90);
+}
+
+.highlight {
+    font-weight: var(--weight-600);
+    color: var(--color-text-100);
+}
+
+.flex_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-24);
+    margin-top: var(--space-40);
+}
+
+.project_wrapper {}
+
+.about_wrapper {}
+
+.box {}
