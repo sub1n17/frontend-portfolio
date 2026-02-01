@@ -4,7 +4,7 @@ import style from './styles.module.css';
 export default function HeroSection() {
     return (
         <>
-            <section className={style.hero}>
+            <section className={`${style.hero} home_section`}>
                 <div className={`${style.hero_inner} section_inner`}>
                     <div className={style.txt_wrapper}>
                         <div className={style.title_wrapper}>

@@ -1,0 +1,72 @@
+.tab_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--space-12);
+    background-color: var(--color-point-bg);
+    padding: var(--space-6);
+    border-radius: var(--radius-20);
+    width: fit-content;
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-10);
+    padding: var(--space-12) var(--space-28);
+    border-radius: var(--radius-20);
+    cursor: pointer;
+    font-weight: var(--weight-600);
+    color: var(--color-text-80);
+    background-color: transparent;
+    transition: all 0.25s;
+}
+
+.iconWrapper {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.2s ease;
+}
+
+.outlined {
+    opacity: 1;
+}
+
+.filled {
+    opacity: 0;
+}
+
+.tab_txt {
+    opacity: 0;
+    max-width: 0;
+    white-space: nowrap;
+    /* ㄴ> 줄바꿈을 하지 않고 한 줄로만 표시 */
+    overflow: hidden;
+    transition: all 0.25s;
+
+}
+
+.tab.active {
+    background-color: #ffffff;
+    color: var(--color-text-100);
+    box-shadow: var(--shadow-1);
+}
+
+.tab.active .outlined {
+    opacity: 0;
+}
+
+.tab.active .filled {
+    opacity: 1;
+}
+
+.active .tab_txt {
+    opacity: 1;
+    max-width: 120px;
+}

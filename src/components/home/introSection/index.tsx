@@ -33,7 +33,7 @@ export default function IntroSection() {
 
     return (
         <>
-            <section>
+            <section className={`home_section`}>
                 <div className={style.fullWidth_wrapper}>
                     <div className={`${style.intro_inner} section_inner`}>
                         <div className={style.window_dots}>

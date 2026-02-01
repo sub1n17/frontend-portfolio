@@ -27,7 +27,7 @@ export default function OverViewSection() {
                                 title="Project"
                                 description="웹 서비스의 핵심 기능을 구현한 프로젝트 모음"
                                 href="/projects"
-                                color="#9BA3EB"
+                                color="#7E87B8"
                                 btnText="View Projects"
                             ></HomeCard>
                         </div>
@@ -37,7 +37,7 @@ export default function OverViewSection() {
                                 title="About"
                                 description="경험과 기술 스택, 프론트엔드로서의 방향성"
                                 href="/about"
-                                color="#B2B9F5"
+                                color="#7E87B8"
                                 btnText="About Me"
                             ></HomeCard>
                         </div>

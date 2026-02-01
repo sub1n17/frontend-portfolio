@@ -49,5 +49,6 @@
 
 .card:hover .view {
     background: var(--color-point);
-    color: var(--color-text-100);
+    /* color: var(--color-text-100); */
+    color: #FFFFFF;
 }

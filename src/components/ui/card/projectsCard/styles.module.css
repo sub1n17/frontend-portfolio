@@ -1,0 +1,102 @@
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius-20);
+    overflow: hidden;
+    background-color: var(--color-card-border);
+    box-shadow: var(--shadow-1);
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(155, 161, 235, 0.4);
+}
+
+.content {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translateY(10px);
+    opacity: 0.9;
+}
+
+.card:hover .content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.thumbnailImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    object-position: top;
+}
+
+.card:hover .thumbnailImg {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: flex-end;
+    padding: var(--space-24);
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.6) 40%,
+            rgba(0, 0, 0, 0.2) 70%,
+            transparent 100%);
+
+}
+
+
+.tech_list {
+    display: flex;
+    gap: var(--space-8);
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-12);
+}
+
+.tech_item {
+    font-size: var(--font-14);
+    font-family: var(--font-mont);
+    /* color: var(--color-point); */
+    color: var(--color-sub);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-16);
+    backdrop-filter: blur(12px);
+    background: rgba(20, 20, 22, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: var(--weight-600);
+}
+
+.title {
+    font-family: var(--font-es);
+    font-size: var(--font-24);
+    font-weight: var(--weight-600);
+    color: #ffffff;
+    margin-bottom: var(--space-8);
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.summary {
+    font-size: var(--font-16);
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-es);
+    line-height: 1.5;
+}
