@@ -31,7 +31,7 @@
     --space-40: 2.5rem;
 
     /* section spacing */
-    /* --section-space: 5rem; */
+    --section-space: 5rem;
     /* ㄴ> 80px */
 
     /* radius */
@@ -122,4 +122,15 @@ main:not(.home_main) {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+
+.about_secTitle {
+    font-size: var(--font-24);
+    font-weight: var(--weight-600);
+    font-family: var(--font-es);
+    margin-bottom: var(--space-16);
+}
+
+.about_section {
+    margin-bottom: var(--section-space);
 }

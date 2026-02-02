@@ -1,0 +1,38 @@
+.hero_section {
+    /* height: 30vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero_wrapper {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.profileImg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    /* border-radius: 50%; */
+    /* overflow: hidden; */
+}
+
+.profileImg img {
+    object-fit: cover;
+}
+
+/* .bubble_wrapper {
+    background-image: url('/images/bubble_lg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 4rem 6rem;
+} */

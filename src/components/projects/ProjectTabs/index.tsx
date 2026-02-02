@@ -5,11 +5,8 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PersonIcon from '@mui/icons-material/Person';
 import style from './styles.module.css';
-import { useState } from 'react';
 
-export default function ProjectTabs() {
-    const [tabActive, setTabActive] = useState('personal');
-
+export default function ProjectTabs({ tabActive, setTabActive }) {
     return (
         <>
             <div className={style.tab_wrapper}>

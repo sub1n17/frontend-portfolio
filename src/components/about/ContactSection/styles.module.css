@@ -1,0 +1,11 @@
+.contact_wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+}
+
+.contact_item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}

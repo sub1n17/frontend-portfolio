@@ -1,8 +1,12 @@
+'use client';
+import { useState } from 'react';
 import ProjectList from './ProjectList';
 import ProjectTabs from './ProjectTabs';
 import style from './styles.module.css';
 
 export default function ProjectsPage() {
+    const [tabActive, setTabActive] = useState('personal');
+
     return (
         <>
             <main className={`${style.project_container} main_inner`}>
@@ -11,11 +15,11 @@ export default function ProjectsPage() {
                     <div className={style.description}>
                         React, Next.js, TypeScript, JavaScript, React Native로 구현한 프로젝트
                     </div>
-                    <ProjectTabs></ProjectTabs>
+                    <ProjectTabs tabActive={tabActive} setTabActive={setTabActive}></ProjectTabs>
                 </header>
 
                 <section className={style.project_section}>
-                    <ProjectList></ProjectList>
+                    <ProjectList tabActive={tabActive}></ProjectList>
                 </section>
             </main>
         </>

@@ -3,14 +3,25 @@ import { personalProjects } from '@/src/data/personalProjects';
 import style from './styles.module.css';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ChevronLeft, Github, MoveLeft, MoveRight, MoveUpRight } from 'lucide-react';
 
 export default function ProjectDetailPage() {
     const params = useParams();
     const project = personalProjects.find((el) => el.id === params.id);
 
+    const currentIndex = personalProjects.findIndex((el) => el.id === params.id);
+    const prevProject = currentIndex > 0 ? personalProjects[currentIndex - 1] : null;
+    const nextProject =
+        personalProjects.length - 1 > currentIndex ? personalProjects[currentIndex + 1] : null;
+
     return (
         <>
             <main className={`${style.project_detail} main_inner`}>
+                <Link href={'/projects'} className={style.back}>
+                    <ChevronLeft />
+                    <span>목록으로</span>
+                </Link>
                 <header className={style.detail_hero}>
                     {project?.thumbnail && (
                         <div className={style.thumbnail_wrapper}>
@@ -33,7 +44,7 @@ export default function ProjectDetailPage() {
                 <section className={style.detail_content}>
                     <div className={style.content_main}>
                         <div className={style.overview_wrapper}>
-                            <h2>Project Overview</h2>
+                            <h2 className={style.content_title}>Project Overview</h2>
                             <ul>
                                 {project?.features.map((el) => (
                                     <li key={el}>{el}</li>
@@ -41,8 +52,8 @@ export default function ProjectDetailPage() {
                             </ul>
                         </div>
 
-                        <div>
-                            <h2>Key Features</h2>
+                        <div className={style.feature_wrapper}>
+                            <h2 className={style.content_title}>Key Features</h2>
                             <ul>
                                 {project?.highlights.map((el) => (
                                     <li key={el}>{el}</li>
@@ -51,8 +62,8 @@ export default function ProjectDetailPage() {
                         </div>
                     </div>
 
-                    <aside className={style.content_side}>
-                        <h3>Tech Stack</h3>
+                    <div className={style.content_side}>
+                        <h2 className={style.content_title}>Tech Stack</h2>
                         <div className={style.tech_tags}>
                             {project?.techStack.map((el) => (
                                 <span key={el} className={style.tech_tag}>
@@ -62,22 +73,42 @@ export default function ProjectDetailPage() {
                         </div>
 
                         <div className={style.links}>
-                            <a href="#" className={style.btn_link}>
-                                Github ↗
-                            </a>
-                            <a href="#" className={style.btn_link}>
-                                Live Demo ↗
-                            </a>
+                            <Link href="#" className={style.btn_link} target="_blank">
+                                <span>Github</span>
+                                <Github className={style.icon} />
+                            </Link>
+                            <Link href="#" className={style.btn_link} target="_blank">
+                                <span>Live Demo</span>
+                                <MoveUpRight className={style.icon} />
+                            </Link>
                         </div>
-                    </aside>
+                    </div>
                 </section>
 
-                <footer className={style.detail_footer}>
-                    <button className={style.next_project}>
-                        <span className={style.label}>Next Project</span>
-                        <span className={style.next_title}>숙박권 거래 플랫폼 (Web)</span>
-                    </button>
-                </footer>
+                <div className={style.project_nav}>
+                    {prevProject && (
+                        <div className={`${style.nav_wrapper} ${style.prev}`}>
+                            <Link href={`/projects/${prevProject.id}`}>
+                                <div className={style.label}>
+                                    <MoveLeft />
+                                    <span>Prev Project</span>
+                                </div>
+                                <div className={style.next_title}>{prevProject.title}</div>
+                            </Link>
+                        </div>
+                    )}
+                    {nextProject && (
+                        <div className={`${style.nav_wrapper} ${style.next}`}>
+                            <Link href={`/projects/${nextProject.id}`}>
+                                <div className={style.label}>
+                                    <span>Next Project</span>
+                                    <MoveRight />
+                                </div>
+                                <div className={style.next_title}>{nextProject.title}</div>
+                            </Link>
+                        </div>
+                    )}
+                </div>
             </main>
         </>
     );
