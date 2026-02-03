@@ -1,0 +1,6 @@
+.about_container {
+    background-image:
+        radial-gradient(circle at 15% 15%, var(--hero-lavender-soft) 0%, transparent 55%),
+        radial-gradient(circle at 85% 85%, rgba(245, 245, 255, 0.4) 0%, transparent 50%);
+    background-attachment: fixed;
+}

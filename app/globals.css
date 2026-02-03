@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
+
 :root {
     /* color */
-    /* --color-bg: #0f1115; */
     --color-card: rgba(255, 255, 255, 0.7);
     --color-card-border: #EDEEF9;
 
@@ -14,9 +14,6 @@
     --color-sub: #C5C9F1;
     --color-point-bg: #F4F5FA;
 
-    /* 기존 */
-    /* --color-point: #C5C9F1; */
-    /* --color-point-bg: #f0f2ff; */
 
     /* spacing */
     --space-4: 0.25rem;
@@ -69,6 +66,16 @@
     --height-header: 4rem;
 
 
+    /* 글래스모피즘 효과 */
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: 1.5px solid rgba(255, 255, 255, 0.5);
+    --glass-blur: blur(16px);
+    --glass-shadow: 0 10px 30px rgba(126, 135, 184, 0.08);
+
+    /* 그라데이션 배경 */
+    --hero-lavender: rgba(235, 230, 255, 1);
+    --hero-lavender-soft: rgba(235, 230, 255, 0.6);
+
 }
 
 @font-face {
@@ -85,11 +92,11 @@
     font-display: swap;
 }
 
-.montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+@font-face {
+    font-family: 'Pretendard Variable';
+    src: url('/fonts/PretendardVariable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 /* 다크모드 */
@@ -101,7 +108,8 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    font-family: "Pretendard Variable", system-ui, sans-serif;
 }
 
 
@@ -110,11 +118,16 @@ body {
 main:not(.home_main) {
     padding-top: calc(var(--height-header) + var(--space-40));
     padding-bottom: var(--space-40);
-    /* padding-top: var(--height-header); */
 }
+
+
 
 .home_section {
     padding-bottom: 12rem;
+}
+
+.section_inner {
+    background-color: transparent;
 }
 
 .section_inner,
@@ -122,6 +135,7 @@ main:not(.home_main) {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+
 }
 
 .about_secTitle {
@@ -133,4 +147,11 @@ main:not(.home_main) {
 
 .about_section {
     margin-bottom: var(--section-space);
+}
+
+.glass_card {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
 }

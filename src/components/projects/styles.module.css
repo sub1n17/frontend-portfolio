@@ -1,3 +1,10 @@
+.project_main {
+    background-image:
+        radial-gradient(circle at 85% 15%, var(--hero-lavender-soft) 0%, transparent 55%),
+        radial-gradient(circle at 15% 85%, rgba(245, 245, 255, 0.4) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
 .project_container {
     padding-bottom: var(--space-40);
     padding-inline: var(--space-24);
@@ -7,7 +14,6 @@
 
 .page_header {
     margin-bottom: var(--space-40);
-    /* padding-top: var(--space-40); */
 }
 
 .title {

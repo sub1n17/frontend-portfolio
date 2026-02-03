@@ -1,3 +1,9 @@
+.detail_main {
+    background-image:
+        radial-gradient(ellipse at 50% -10%, var(--hero-lavender) 0%, transparent 70%);
+    background-attachment: fixed;
+}
+
 .project_detail {
     padding-inline: var(--space-24);
 }

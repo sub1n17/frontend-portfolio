@@ -1,17 +1,17 @@
 import ContactSection from './ContactSection';
-import ExperienceSection from './ExperienceSection';
 import HeroSection from './HeroSection';
-import SkillSection from './SkillSection';
 import ValueSection from './ValueSection';
-
+import InfoSection from './InfoSection';
+import style from './styles.module.css';
 export default function AboutPage() {
     return (
         <>
-            <HeroSection></HeroSection>
-            <ExperienceSection></ExperienceSection>
-            <SkillSection></SkillSection>
-            <ValueSection></ValueSection>
-            <ContactSection></ContactSection>
+            <main className={style.about_container}>
+                <HeroSection></HeroSection>
+                <ValueSection></ValueSection>
+                <InfoSection></InfoSection>
+                <ContactSection></ContactSection>
+            </main>
         </>
     );
 }

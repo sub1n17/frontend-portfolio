@@ -18,6 +18,12 @@
     position: relative;
 }
 
+/* 포트에 들어올 때 배경이 와이드로 퍼질 때 배경 은은하게 확산 */
+/* .overview_section.active {
+    background: radial-gradient(circle at center, var(--hero-lavender-soft) 0%, #ffffff 80%);
+    transition: all 0.8s ease-out;
+} */
+
 .code {
     font-family: var(--font-jetBrains);
     font-size: var(--font-26, 26px);
