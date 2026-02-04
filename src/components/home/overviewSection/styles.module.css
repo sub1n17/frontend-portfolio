@@ -1,33 +1,170 @@
-.overview_section {
-    position: relative;
-    background-color: #ffffff;
-
-
+.overview_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-space) 0;
 }
-
-
 
 .title {
-    font-size: 5rem;
-    font-weight: 200;
+    font-size: var(--font-40);
+    font-family: var(--font-mont);
+    font-weight: var(--weight-800);
+    letter-spacing: 0.2rem;
     color: var(--color-text-100);
+    margin-bottom: var(--space-32);
+    text-align: center;
 }
 
-.description {
-    word-break: keep-all;
-    max-width: 42rem;
-    line-height: 1.7;
-    color: var(--color-text-90);
+.search_wrapper {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: var(--space-8);
+    border-radius: 999px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    margin-bottom: var(--space-80);
+    transition: all 0.3s;
 }
 
-.highlight {
-    font-weight: var(--weight-600);
-    color: var(--color-text-100);
+.search_wrapper:hover {
+    box-shadow: var(--glass-hover-shadow);
+    border-color: var(--glass-hover-border);
 }
 
-.flex_wrapper {
+.search_inner {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 999px;
+    width: 35rem;
+    gap: var(--space-12);
+    padding: var(--space-10) var(--space-24);
+}
+
+.searchBar {
+    flex: 1;
+    color: var(--color-text-80);
+    font-family: var(--font-es);
+}
+
+.cursor {
+    font-weight: 100;
+    color: #000;
+    animation: blink 1s step-end infinite;
+    /* step-end : 딱딱 끊기는 효과 */
+}
+
+
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.card_wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-24);
-    margin-top: var(--space-40);
+    gap: var(--space-30);
+    padding-top: var(--space-24);
+    /* padding-top: 8em; */
+}
+
+.card_item {
+    position: relative;
+}
+
+.hoverImg {
+    position: absolute;
+    max-width: 60px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    top: -5%;
+    opacity: 0.3;
+    scale: 0.8;
+    filter: blur(3px);
+
+    transition: all 0.5s;
+}
+
+.card_item:hover .hoverImg {
+    opacity: 1;
+    scale: 1.1;
+    filter: blur(0px);
+    transform: translateY(-40px) rotate(0deg);
+}
+
+.hover1 {
+    left: 38%;
+    transform: translateY(-5px) rotate(-18deg);
+}
+
+.hover2 {
+    left: 43%;
+    transform: translateY(-15px) rotate(-8deg);
+    transition-delay: 0.04s;
+}
+
+.hover3 {
+    left: 48%;
+    transform: translateY(-5px) rotate(-2deg);
+    transition-delay: 0.08s;
+}
+
+.hover4 {
+    left: 52%;
+    transform: translateY(-8px) rotate(4deg);
+    transition-delay: 0.08s;
+}
+
+.hover5 {
+    left: 57%;
+    transform: translateY(-2px) rotate(10deg);
+    transition-delay: 0.04s;
+}
+
+.hover6 {
+    left: 62%;
+    transform: translateY(-12px) rotate(18deg);
+}
+
+.card_item:hover .hover1 {
+    left: 5%;
+    transform: translateY(-35px) rotate(-12deg);
+}
+
+.card_item:hover .hover2 {
+    left: 22%;
+    transform: translateY(-48px) rotate(-6deg);
+}
+
+.card_item:hover .hover3 {
+    left: 39%;
+    transform: translateY(-55px) rotate(-2deg);
+}
+
+.card_item:hover .hover4 {
+    left: 56%;
+    transform: translateY(-55px) rotate(2deg);
+}
+
+.card_item:hover .hover5 {
+    left: 73%;
+    transform: translateY(-48px) rotate(6deg);
+}
+
+.card_item:hover .hover6 {
+    left: 90%;
+    transform: translateY(-35px) rotate(12deg);
 }

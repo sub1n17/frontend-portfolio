@@ -17,19 +17,19 @@
     padding: var(--space-40);
     border-radius: var(--radius-20);
     transition: all 0.4s;
-    background: rgba(255, 255, 255, 0.45);
-    border: 1.5px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 10px 30px rgba(126, 135, 184, 0.08);
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
 
 }
 
 .value_item:hover {
     transform: translateY(-8px);
     /* border-color: var(--color-point); */
-    border-color: rgba(126, 135, 184, 0.4);
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 10px 30px rgba(126, 135, 184, 0.15);
+    border-color: var(--glass-hover-border);
+    background: var(--glass-hover-bg);
+    box-shadow: var(--glass-hover-shadow);
 }
 
 .num {
