@@ -3,14 +3,22 @@
 import Link from 'next/link';
 import style from './styles.module.css';
 import { ICardProps } from './types';
+import Image from 'next/image';
 
-export default function HomeCard({ Icon, title, description, href, color, btnText }: ICardProps) {
+export default function HomeCard({ title, description, href, image }: ICardProps) {
     return (
         <Link href={`${href}`} className={style.card}>
-            <Icon sx={{ color: color, fontSize: '2.5rem' }}></Icon>
-            <div className={style.title}>{title}</div>
-            <div className={style.description}>{description}</div>
-            <div className={style.view}>{btnText}</div>
+            <h2 className={style.title}>{title}</h2>
+            <div className={style.description_wrapper}>
+                <span className={style.description}>{description}</span>
+                <Image
+                    src={image}
+                    alt={title}
+                    width={100}
+                    height={100}
+                    className={style.card_img}
+                ></Image>
+            </div>
         </Link>
     );
 }
