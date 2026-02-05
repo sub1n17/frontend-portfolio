@@ -1,41 +1,37 @@
-/* 지샵 컨테이너 */
 .fullWidth_wrapper {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     background-color: #f8f7ff;
-    border-radius: var(--radius-20);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 .intro_inner {
-    min-height: 45vh;
+    min-height: 70vh;
+    padding-top: calc(35vh - 7rem);
+    /* 35vh로 항상 섹션의 절반에서부터 시작할 거라고 기준선 박아두고 세로로 중앙정렬하는 건 눈대중으로 */
+    /* 35vh를 섹션 높이(70vh)의 절반 기준선으로 고정하고,
+    세로 중앙 정렬은 실제 중앙이 아니라 눈대중(옵티컬 보정)으로 맞춘다. */
+    /* 35vh=구조적 기준선,
+        나머지는 시각적 중앙을 위한 감각 보정값. */
+
+
+    /* padding-top: 14rem; */
+    /* . 글자가 늘어나면 기준점은 가만히 있고 아래로만 공간이 늘어나기 때문에 레이아웃이 요동치지 않으면서도 시각적인 중앙을 유지할 수 있는 것입니다. */
+
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    /* 중심이 계속 다시 계산됨 위아래로 흔들림 (덜거덕)add*/
+    /* 내용물이 한 줄 늘어날 때마다 위아래로 동시에 확장하며 기준점을 흔듭니다 (덜거덕거림의 원인). */
     justify-content: center;
-    padding: 3.75rem;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.02);
     position: relative;
 }
 
-/* 뷰포트 진입 시 (Active 상태) */
-.fullWidth_wrapper.active {
-    max-width: 100%;
-    /* 1200px 제한을 풀어버림 -> 화면 끝까지 퍼짐 */
-    border-radius: 0;
-}
 
-/* 포트에 들어올 때 배경이 와이드로 퍼질 때 배경 은은하게 확산 */
-/* .overview_section.active {
-    background: radial-gradient(circle at center, var(--hero-lavender-soft) 0%, #ffffff 80%);
-    transition: all 0.8s ease-out;
-} */
 
 .code {
     font-family: var(--font-jetBrains);
     font-size: var(--font-26, 26px);
     line-height: 2;
     font-weight: 500;
-    /* color: #e6edf3; */
 }
 
 
@@ -44,7 +40,6 @@
     width: 3px;
     height: 1em;
     margin-left: 2px;
-    /* background: #FFFFFF; */
     background: #000000;
     animation: blink 1s steps(1) infinite;
 }

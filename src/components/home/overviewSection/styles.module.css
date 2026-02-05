@@ -76,8 +76,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-30);
-    padding-top: var(--space-24);
-    /* padding-top: 8em; */
+    padding-top: var(--space-60);
+
 }
 
 .card_item {

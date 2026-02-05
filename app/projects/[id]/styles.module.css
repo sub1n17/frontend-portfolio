@@ -30,7 +30,7 @@
 
 .thumbnail_wrapper {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 21/9;
     border-radius: var(--radius-20);
     overflow: hidden;
     margin-bottom: var(--space-32);
@@ -40,6 +40,7 @@
 
 .thumbnail_wrapper img {
     object-fit: cover;
+    object-position: center top;
 }
 
 .detail_title {
@@ -157,13 +158,12 @@
 
 .nav_wrapper {
     flex: 1;
+    transition: all 0.3s;
 }
 
 .nav_wrapper.next {
     text-align: right;
 }
-
-
 
 
 .label {
@@ -179,9 +179,19 @@
     font-size: var(--font-28);
     font-weight: var(--weight-800);
     color: var(--color-text-100);
-    transition: color 0.3s;
+    position: relative;
+    transition: all 0.3s;
 }
 
-.next_project:hover .next_title {
+.nav_wrapper:hover .next_title,
+.nav_wrapper:hover .label {
     color: var(--color-point);
+}
+
+.nav_wrapper.prev:hover {
+    transform: translateX(-10px);
+}
+
+.nav_wrapper.next:hover {
+    transform: translateX(10px);
 }
