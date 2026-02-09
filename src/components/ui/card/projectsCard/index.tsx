@@ -1,13 +1,37 @@
 import Image from 'next/image';
 import style from './styles.module.css';
 
-export default function ProjectsCard({ thumbnail, techStack, title, summary, role, tabActive }) {
+interface ProjectsCardProps {
+    thumbnail: string;
+    mockup?: string;
+    techStack: string[];
+    title: string;
+    summary?: string;
+    role?: string;
+    tabActive: string;
+}
+
+export default function ProjectsCard({
+    thumbnail,
+    techStack,
+    title,
+    summary,
+    role,
+    tabActive,
+}: ProjectsCardProps) {
     const techCount = tabActive === 'personal' ? 3 : 4;
     return (
         <>
             <div className={style.card}>
                 <div className={style.thumbnail}>
-                    <Image src={thumbnail} alt={title} fill className={style.thumbnailImg}></Image>
+                    <Image
+                        src={thumbnail}
+                        alt={title}
+                        fill
+                        className={`${style.thumbnailImg} ${
+                            title.includes('장소 공유') ? style.thumbLeft : ''
+                        }`}
+                    ></Image>
                 </div>
                 <div className={style.overlay}>
                     <div className={style.content}>
