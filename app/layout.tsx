@@ -40,9 +40,8 @@ const JetBrains = JetBrains_Mono({
 const montserrat = Montserrat({
     subsets: ['latin'],
     display: 'swap',
-    // 사용하고자 하는 모든 두께를 배열에 넣으세요
     weight: ['400', '700', '800'],
-    variable: '--font-mont', // CSS 변수로 사용
+    variable: '--font-mont',
 });
 
 export const metadata: Metadata = {
@@ -62,7 +61,7 @@ export default function RootLayout({
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
                 <Header></Header>
                 {children}
-                {/* <Footer></Footer> */}
+                <Footer></Footer>
             </body>
         </html>
     );
