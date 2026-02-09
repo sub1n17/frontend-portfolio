@@ -33,7 +33,7 @@ export const personalProjects = [
         title: '장소 공유 서비스 (Hybrid App)',
         type: 'personal',
         summary: '웹뷰 기반 장소 공유 하이브리드 애플리케이션',
-        thumbnail: '/images/project_p2_3.png',
+        thumbnail: '/images/project_p2_1.png',
         techStack: [
             'Next.js',
             'TypeScript',
