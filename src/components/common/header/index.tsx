@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import style from './styles.module.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+    const pathname = usePathname();
+
     return (
         <>
             <header className={style.header}>
@@ -13,25 +18,37 @@ export default function Header() {
                                 src={'/images/subinLogo.png'}
                                 alt="로고"
                                 width={33}
-                                height={26}
+                                height={28}
+                                style={{ width: 'auto', height: 'auto' }}
                             ></Image>
                         </Link>
                     </h1>
-                    <div className={style.header_right}>
-                        <nav>
-                            <ul className={style.menu}>
-                                <li>
-                                    <Link href="/projects">Projects</Link>
-                                </li>
-                                <li>
-                                    <Link href="/about">About</Link>
-                                </li>
-                            </ul>
-                        </nav>
-                        <Link href={'/'} className={style.github}>
-                            Github
-                        </Link>
-                    </div>
+
+                    <nav className={style.menu}>
+                        <ul>
+                            <li>
+                                <Link
+                                    href="/projects"
+                                    className={pathname.startsWith('/projects') ? style.active : ''}
+                                >
+                                    Projects
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/about"
+                                    className={pathname === '/about' ? style.active : ''}
+                                >
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={'https://github.com/sub1n17'} target="_blank">
+                                    Github
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header>
         </>

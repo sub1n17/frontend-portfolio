@@ -1,8 +1,7 @@
 .header {
     height: var(--height-header);
     z-index: 999;
-    -webkit-backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
     position: fixed;
     top: 0;
@@ -27,7 +26,56 @@
     gap: var(--space-40);
 }
 
-.menu {
+.menu ul {
     display: flex;
     gap: var(--space-32);
+
+}
+
+.menu a {
+    display: inline-block;
+    font-family: var(--font-mont);
+
+    color: var(--color-text-100);
+    transition: all 0.3s;
+    position: relative;
+    padding: 0 6px;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(circle,
+            rgba(155, 161, 235, 0.6) 0%,
+            rgba(155, 161, 235, 0.1) 50%,
+            transparent 80%);
+    filter: blur(8px);
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.menu a.active {
+    font-weight: var(--weight-600);
+}
+
+.menu a.active::after {
+    opacity: 1;
+}
+
+.menu a:hover:not(.active) {
+    color: var(--color-text-80);
+
+}
+
+.menu a:hover:not(.active)::after {
+    opacity: 0.25;
+    filter: blur(4px);
+    transform: translate(-50%, -50%) scale(0.85);
 }
