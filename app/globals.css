@@ -121,16 +121,10 @@ body {
     font-family: "Pretendard Variable", system-ui, sans-serif;
 }
 
-
-
-
 main:not(.home_main) {
     padding-top: calc(var(--height-header) + var(--space-40));
-    /* padding-bottom: var(--space-40); */
     padding-bottom: var(--section-space);
 }
-
-
 
 .home_section {
     padding-bottom: 12rem;
