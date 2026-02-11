@@ -4,14 +4,19 @@ export interface IPersonalProjectsProps {
     type: string;
     summary: string;
     thumbnail: string;
-    techStack: string[];
-    features: string[];
-    highlights?: string[];
+    skills: {
+        type: string;
+        skill: string[];
+    };
+    overview: string[];
+    features?: {
+        title: string;
+        desc: string[];
+    };
     period?: string;
     links?: {
         github?: string;
         demo?: string;
     };
-    isFeatured?: boolean;
     role?: string;
 }
