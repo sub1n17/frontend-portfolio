@@ -49,16 +49,6 @@
     transform: scale(1.1);
 }
 
-.mockup {
-    position: absolute;
-    right: 30px;
-    top: 10%;
-    width: 160px;
-    height: auto;
-    z-index: 1;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
-}
-
 .overlay {
     position: absolute;
     bottom: 0;
@@ -77,7 +67,6 @@
 
 }
 
-
 .tech_list {
     display: flex;
     gap: var(--space-8);
@@ -89,7 +78,6 @@
 .tech_item {
     font-size: var(--font-14);
     font-family: var(--font-mont);
-    /* color: var(--color-point); */
     color: var(--color-sub);
     padding: var(--space-4) var(--space-8);
     border-radius: var(--radius-16);

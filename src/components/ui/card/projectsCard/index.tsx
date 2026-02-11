@@ -3,8 +3,10 @@ import style from './styles.module.css';
 
 interface ProjectsCardProps {
     thumbnail: string;
-    mockup?: string;
-    techStack: string[];
+    skills: {
+        type: string;
+        skill: string[];
+    }[];
     title: string;
     summary?: string;
     role?: string;
@@ -13,7 +15,7 @@ interface ProjectsCardProps {
 
 export default function ProjectsCard({
     thumbnail,
-    techStack,
+    skills,
     title,
     summary,
     role,
@@ -36,11 +38,14 @@ export default function ProjectsCard({
                 <div className={style.overlay}>
                     <div className={style.content}>
                         <ul className={style.tech_list}>
-                            {techStack.slice(0, techCount).map((el: string) => (
-                                <li key={el} className={style.tech_item}>
-                                    {el}
-                                </li>
-                            ))}
+                            {skills
+                                .find((el) => el.type === 'Skills')
+                                ?.skill.slice(0, techCount)
+                                .map((el: string) => (
+                                    <li key={el} className={style.tech_item}>
+                                        {el}
+                                    </li>
+                                ))}
                         </ul>
                         <div className={style.title}>{title}</div>
                         {!role && <div className={style.summary}>{summary}</div>}

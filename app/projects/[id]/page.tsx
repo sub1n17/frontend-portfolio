@@ -45,36 +45,53 @@ export default function ProjectDetailPage() {
                         <div className={style.content_main}>
                             <div className={style.overview_wrapper}>
                                 <h2 className={style.content_title}>Project Overview</h2>
-                                <ul>
-                                    {project?.features.map((el) => (
-                                        <li key={el}>{el}</li>
-                                    ))}
-                                </ul>
+                                <p>{project?.overview}</p>
                             </div>
                             <div className={style.feature_wrapper}>
                                 <h2 className={style.content_title}>Key Features</h2>
                                 <ul>
-                                    {project?.highlights.map((el) => (
-                                        <li key={el}>{el}</li>
+                                    {project?.features.map((el) => (
+                                        <li key={el.title}>
+                                            <span>{el.title}</span>
+                                            <ul>
+                                                {el.desc.map((el) => (
+                                                    <li key={el}>{el}</li>
+                                                ))}
+                                            </ul>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
                         <div className={style.content_side}>
-                            <h2 className={style.content_title}>Tech Stack</h2>
-                            <div className={style.tech_tags}>
-                                {project?.techStack.map((el) => (
-                                    <span key={el} className={style.tech_tag}>
-                                        {el}
-                                    </span>
-                                ))}
+                            {/* <h2 className={style.content_title}>Tech Stack</h2> */}
+                            <h2 className={style.content_title}>Tools & Frameworks</h2>
+                            <div>
+                                <ul className={style.tech_wrapper}>
+                                    {project?.skills.map((el) => (
+                                        <li key={el.type}>
+                                            <span className={style.type}>{el.type}</span>
+                                            <ul>
+                                                {el.skill.map((el) => (
+                                                    <li className={style.skills} key={el}>
+                                                        {el}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                             <div className={style.links}>
                                 <Link href="#" className={style.btn_link} target="_blank">
                                     <span>Github</span>
                                     <Github className={style.icon} />
                                 </Link>
-                                <Link href="#" className={style.btn_link} target="_blank">
+                                <Link
+                                    href={project?.links.demo ?? ''}
+                                    className={style.btn_link}
+                                    target="_blank"
+                                >
                                     <span>Live Demo</span>
                                     <MoveUpRight className={style.icon} />
                                 </Link>
