@@ -13,6 +13,7 @@ export default function ProjectList({ tabActive }) {
                           <Link href={`/projects/${el.id}`} key={el.id}>
                               <ProjectsCard
                                   thumbnail={el.thumbnail}
+                                  cardSkills={el.cardSkills}
                                   skills={el.skills}
                                   title={el.title}
                                   summary={el.summary}

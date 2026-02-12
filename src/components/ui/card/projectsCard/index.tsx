@@ -3,6 +3,7 @@ import style from './styles.module.css';
 
 interface ProjectsCardProps {
     thumbnail: string;
+    cardSkills: string[];
     skills: {
         type: string;
         skill: string[];
@@ -15,13 +16,15 @@ interface ProjectsCardProps {
 
 export default function ProjectsCard({
     thumbnail,
+    cardSkills,
     skills,
     title,
     summary,
     role,
     tabActive,
 }: ProjectsCardProps) {
-    const techCount = tabActive === 'personal' ? 3 : 4;
+    const isPersonal = tabActive === 'personal';
+    const techCount = isPersonal ? 3 : 4;
     return (
         <>
             <div className={style.card}>
@@ -38,14 +41,22 @@ export default function ProjectsCard({
                 <div className={style.overlay}>
                     <div className={style.content}>
                         <ul className={style.tech_list}>
-                            {skills
-                                .find((el) => el.type === 'Skills')
-                                ?.skill.slice(0, techCount)
-                                .map((el: string) => (
-                                    <li key={el} className={style.tech_item}>
-                                        {el}
-                                    </li>
-                                ))}
+                            {isPersonal
+                                ? // 개인 프로젝트
+                                  cardSkills.map((el: string) => (
+                                      <li key={el} className={style.tech_item}>
+                                          {el}
+                                      </li>
+                                  ))
+                                : // 회사 프로젝트
+                                  skills
+                                      .find((el) => el.type === 'Skills')
+                                      ?.skill.slice(0, techCount)
+                                      .map((el: string) => (
+                                          <li key={el} className={style.tech_item}>
+                                              {el}
+                                          </li>
+                                      ))}
                         </ul>
                         <div className={style.title}>{title}</div>
                         {!role && <div className={style.summary}>{summary}</div>}

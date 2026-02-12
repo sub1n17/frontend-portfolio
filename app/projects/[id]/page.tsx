@@ -26,7 +26,12 @@ export default function ProjectDetailPage() {
                     <header className={style.detail_hero}>
                         {project?.thumbnail && (
                             <div className={style.thumbnail_wrapper}>
-                                <Image src={project?.thumbnail} alt={project?.title} fill></Image>
+                                <Image
+                                    src={project?.thumbnail}
+                                    alt={project?.title}
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 1150px"
+                                ></Image>
                             </div>
                         )}
                         <div className={style.hero_info}>
@@ -64,37 +69,41 @@ export default function ProjectDetailPage() {
                             </div>
                         </div>
                         <div className={style.content_side}>
-                            {/* <h2 className={style.content_title}>Tech Stack</h2> */}
-                            <h2 className={style.content_title}>Tools & Frameworks</h2>
                             <div>
-                                <ul className={style.tech_wrapper}>
-                                    {project?.skills.map((el) => (
-                                        <li key={el.type}>
-                                            <span className={style.type}>{el.type}</span>
-                                            <ul>
-                                                {el.skill.map((el) => (
-                                                    <li className={style.skills} key={el}>
-                                                        {el}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </li>
-                                    ))}
-                                </ul>
+                                <h2 className={style.content_title}>Tech Stack</h2>
+                                <div>
+                                    <ul className={style.tech_wrapper}>
+                                        {project?.skills.map((el) => (
+                                            <li key={el.type}>
+                                                <span className={style.type}>{el.type}</span>
+                                                <ul>
+                                                    {el.skill.map((el) => (
+                                                        <li className={style.skills} key={el}>
+                                                            {el}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                            <div className={style.links}>
-                                <Link href="#" className={style.btn_link} target="_blank">
-                                    <span>Github</span>
-                                    <Github className={style.icon} />
-                                </Link>
-                                <Link
-                                    href={project?.links.demo ?? ''}
-                                    className={style.btn_link}
-                                    target="_blank"
-                                >
-                                    <span>Live Demo</span>
-                                    <MoveUpRight className={style.icon} />
-                                </Link>
+                            <div>
+                                <h2 className={style.content_title}>Links</h2>
+                                <div className={style.links}>
+                                    <Link href="#" className={style.btn_link} target="_blank">
+                                        <span>Github</span>
+                                        <Github className={style.icon} />
+                                    </Link>
+                                    <Link
+                                        href={project?.links.demo ?? ''}
+                                        className={style.btn_link}
+                                        target="_blank"
+                                    >
+                                        <span>Live Demo</span>
+                                        <MoveUpRight className={style.icon} />
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </section>
