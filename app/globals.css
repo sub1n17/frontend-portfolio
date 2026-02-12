@@ -23,6 +23,7 @@
     --space-12: 0.75rem;
     --space-16: 1rem;
     --space-18: 1.125rem;
+    --space-20: 1.25rem;
     --space-24: 1.5rem;
     --space-28: 1.75rem;
     --space-30: 1.875rem;
@@ -64,7 +65,6 @@
     --font-mont: "Montserrat";
 
     /* shadow */
-    /* --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.3); */
     --shadow-1: 0 15px 50px rgba(155, 161, 235, 0.2);
 
     /* height */
