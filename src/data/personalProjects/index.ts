@@ -5,6 +5,7 @@ export const personalProjects = [
         type: 'personal',
         summary: 'Next.js 기반 숙박권 등록·구매 서비스',
         thumbnail: '/images/project_p1.png',
+        cardSkills: ['Next.js', 'TypeScript', 'React'],
         skills: [
             {
                 type: 'Skills',
@@ -60,7 +61,7 @@ export const personalProjects = [
         role: '프론트엔드 개발',
         period: '2025.08 - 2025.11',
         links: {
-            github: 'https://github.com/...',
+            github: 'https://github.com/sub1n17/triptrip-frontend',
             demo: 'https://triptrip-frontend.vercel.app/',
         },
     },
@@ -70,6 +71,7 @@ export const personalProjects = [
         type: 'personal',
         summary: '웹뷰 기반 장소 공유 하이브리드 애플리케이션',
         thumbnail: '/images/project_p2_1.png',
+        cardSkills: ['Next.js', 'TypeScript', 'React Native'],
         skills: [
             {
                 type: 'Skills',
@@ -117,7 +119,7 @@ export const personalProjects = [
         role: '프론트엔드 개발',
         period: '2025.11 - 2026.01',
         links: {
-            github: 'https://github.com/...',
+            github: 'https://github.com/sub1n17/triptrip-mobile-webview',
             demo: 'https://triptrip-mobile-webview.vercel.app/',
         },
     },
@@ -127,14 +129,15 @@ export const personalProjects = [
         type: 'personal',
         summary: '로컬스토리지를 활용한 감정 기반 다이어리 웹 애플리케이션',
         thumbnail: '/images/project_p3.png',
+        cardSkills: ['HTML', 'CSS', 'JavaScript'],
         skills: [
             {
                 type: 'Skills',
-                skill: ['HTML', 'CSS', 'JavaScript', 'Localstorage'],
+                skill: ['HTML', 'CSS', 'JavaScript'],
             },
             {
                 type: 'Tools & Frameworks',
-                skill: ['LocalStorage', 'Fetch API', 'Clipboard API, Vercel'],
+                skill: ['LocalStorage', 'Fetch API', 'Clipboard API', 'Vercel'],
             },
         ],
         overview: `
@@ -169,7 +172,7 @@ export const personalProjects = [
         role: '프론트엔드 개발',
         period: '2025.07 - 2025.08',
         links: {
-            github: 'https://github.com/...',
+            github: 'https://github.com/sub1n17/localstorage-diary',
             demo: 'https://...',
         },
     },
@@ -180,13 +183,14 @@ export const personalProjects = [
         type: 'personal',
         summary: '프로젝트 구조화와 사용자 경험에 집중한 개인 포트폴리오 웹사이트',
         thumbnail: '/images/project_p4.png',
+        cardSkills: ['Next.js', 'TypeScript'],
         skills: [
             {
                 type: 'Skills',
-                skill: ['HTML', 'CSS', 'JavaScript', 'Localstorage'],
+                skill: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
             },
             {
-                type: 'Tech Stack',
+                type: 'Tools & Frameworks',
                 skill: ['Next.js, Vercel'],
             },
         ],
@@ -219,7 +223,7 @@ export const personalProjects = [
         role: '기획 · 디자인 · 프론트엔드 개발',
         period: '2026.01 - 2026.02',
         links: {
-            github: 'https://github.com/...',
+            github: 'https://github.com/sub1n17/frontend-portfolio',
             demo: 'https://...',
         },
     },

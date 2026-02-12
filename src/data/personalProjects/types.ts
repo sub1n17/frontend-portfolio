@@ -4,6 +4,7 @@ export interface IPersonalProjectsProps {
     type: string;
     summary: string;
     thumbnail: string;
+    cardSkills: string[];
     skills: {
         type: string;
         skill: string[];
