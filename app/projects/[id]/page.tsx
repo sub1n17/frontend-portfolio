@@ -2,9 +2,9 @@
 import { personalProjects } from '@/src/data/personalProjects';
 import style from './styles.module.css';
 import { useParams } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronLeft, Github, MoveLeft, MoveRight, MoveUpRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProjectDetailPage() {
     const params = useParams();
@@ -24,16 +24,19 @@ export default function ProjectDetailPage() {
                         <span>목록으로</span>
                     </Link>
                     <header className={style.detail_hero}>
-                        {project?.thumbnail && (
-                            <div className={style.thumbnail_wrapper}>
+                        <div className={style.thumbnail_wrapper}>
+                            {project?.demo ? (
+                                <video src={project?.demo} controls autoPlay muted></video>
+                            ) : (
                                 <Image
-                                    src={project?.thumbnail}
-                                    alt={project?.title}
+                                    src={project?.thumbnail ?? ''}
+                                    alt={project?.title ?? ''}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 1150px"
                                 ></Image>
-                            </div>
-                        )}
+                            )}
+                        </div>
+
                         <div className={style.hero_info}>
                             <h1 className={style.detail_title}>{project?.title}</h1>
                             <div className={style.detail_meta}>
@@ -63,6 +66,18 @@ export default function ProjectDetailPage() {
                                                     <li key={el}>{el}</li>
                                                 ))}
                                             </ul>
+                                            {el.title === '디바이스 권한 제어' &&
+                                                project?.featureDemo && (
+                                                    <div className={style.feature_demo}>
+                                                        <video
+                                                            src={project.featureDemo}
+                                                            autoPlay
+                                                            muted
+                                                            loop
+                                                            playsInline
+                                                        />
+                                                    </div>
+                                                )}
                                         </li>
                                     ))}
                                 </ul>
@@ -91,7 +106,11 @@ export default function ProjectDetailPage() {
                             <div>
                                 <h2 className={style.content_title}>Links</h2>
                                 <div className={style.links}>
-                                    <Link href="#" className={style.btn_link} target="_blank">
+                                    <Link
+                                        href={project?.links.github ?? ''}
+                                        className={style.btn_link}
+                                        target="_blank"
+                                    >
                                         <span>Github</span>
                                         <Github className={style.icon} />
                                     </Link>
