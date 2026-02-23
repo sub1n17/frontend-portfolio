@@ -4,7 +4,7 @@ Next.js와 TypeScript 기반으로 구현한 개인 포트폴리오 웹사이트
 
 ## 🔗 Links
 
-- Deploy: https://subin.vercel.app
+- Deploy: https://choisubin.vercel.app
 - GitHub: https://github.com/sub1n17/frontend-portfolio
 
 ## 🛠 Tech Stack

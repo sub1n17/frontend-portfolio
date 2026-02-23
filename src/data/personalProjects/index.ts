@@ -231,7 +231,7 @@ export const personalProjects = [
         period: '2026.01 - 2026.02',
         links: {
             github: 'https://github.com/sub1n17/frontend-portfolio',
-            demo: 'https://...',
+            demo: 'https://choisubin.vercel.app/',
         },
     },
 ];
