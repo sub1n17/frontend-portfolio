@@ -1,11 +1,11 @@
 import IntroSection from './IntroSection';
 import OverViewSection from './OverviewSection';
-import TitleSection from './HeroSection';
+import HeroSection from './HeroSection';
 
 export default function HomePage() {
     return (
         <>
-            <TitleSection></TitleSection>
+            <HeroSection></HeroSection>
             <IntroSection></IntroSection>
             <OverViewSection></OverViewSection>
         </>
