@@ -1,6 +1,6 @@
-import IntroSection from './IntroSection';
-import OverViewSection from './OverviewSection';
-import HeroSection from './HeroSection';
+import IntroSection from './introSection';
+import HeroSection from './heroSection';
+import OverViewSection from './overviewSection';
 
 export default function HomePage() {
     return (
