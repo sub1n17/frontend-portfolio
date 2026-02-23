@@ -34,6 +34,7 @@ export default function Footer() {
                             <Link
                                 href={'https://github.com/sub1n17'}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 data-text="Github"
                             >
                                 Github

@@ -67,7 +67,11 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={'https://github.com/sub1n17'} target="_blank">
+                                <Link
+                                    href={'https://github.com/sub1n17'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Github
                                 </Link>
                             </li>
@@ -101,6 +105,7 @@ export default function Header() {
                                 <Link
                                     href="https://github.com/sub1n17"
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     onClick={onClickToggle}
                                 >
                                     Github
