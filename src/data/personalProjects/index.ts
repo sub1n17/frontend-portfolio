@@ -4,7 +4,8 @@ export const personalProjects = [
         title: '숙박권 거래 플랫폼 (Web)',
         type: 'personal',
         summary: 'Next.js 기반 숙박권 등록·구매 서비스',
-        thumbnail: '/images/project_p1.png',
+        thumbnail: '/images/project_p1_1.png',
+        demo: '/videos/demo_triptrip.mp4',
         cardSkills: ['Next.js', 'TypeScript', 'React'],
         skills: [
             {
@@ -40,7 +41,7 @@ export const personalProjects = [
                 title: '숙박권 거래 및 포인트 결제',
                 desc: [
                     'LocalStorage 기반 최근 본 숙박권 노출',
-                    '포트원 API 연동을 통한 포인트 충전 및 숙박권 결제 시스템',
+                    '포트원 API 연동을 통한 포인트 충전 및 숙박권 결제 시스템 (테스트 모드)',
                 ],
             },
             {
@@ -70,7 +71,10 @@ export const personalProjects = [
         title: '장소 공유 서비스 (Hybrid App)',
         type: 'personal',
         summary: '웹뷰 기반 장소 공유 하이브리드 애플리케이션',
-        thumbnail: '/images/project_p2_1.png',
+        thumbnail: '/images/project_p2.png',
+        objectPosition: '70% center',
+        demo: '/videos/demo_hybrid.mp4',
+        featureDemo: '/videos/demo_mobile.mp4',
         cardSkills: ['Next.js', 'TypeScript', 'React Native'],
         skills: [
             {
@@ -97,7 +101,10 @@ export const personalProjects = [
         features: [
             {
                 title: '하이브리드 앱 환경 구축',
-                desc: ['웹뷰 환경을 고려한 모바일 레이아웃 기반 UI 구성'],
+                desc: [
+                    '웹뷰 환경을 고려한 모바일 레이아웃 기반 UI 구성',
+                    '웹과 앱 환경 차이를 고려하여 토큰 저장 방식을 분리 적용 (LocalStorage / SecureStore)',
+                ],
             },
             {
                 title: '지도 기반 위치 등록',
@@ -113,7 +120,7 @@ export const personalProjects = [
             },
             {
                 title: '디바이스 권한 제어',
-                desc: ['알림·위치 권한 상태 동기화 및 설정 페이지 연동'],
+                desc: ['알림·위치 권한 설정 페이지 연동', '앱 복귀 시 권한 상태 자동 동기화 처리'],
             },
         ],
         role: '프론트엔드 개발',
@@ -129,6 +136,7 @@ export const personalProjects = [
         type: 'personal',
         summary: '로컬스토리지를 활용한 감정 기반 다이어리 웹 애플리케이션',
         thumbnail: '/images/project_p3.png',
+        demo: '/videos/demo_diary.mp4',
         cardSkills: ['HTML', 'CSS', 'JavaScript'],
         skills: [
             {
@@ -172,17 +180,16 @@ export const personalProjects = [
         role: '프론트엔드 개발',
         period: '2025.07 - 2025.08',
         links: {
-            github: 'https://github.com/sub1n17/localstorage-diary',
-            demo: 'https://...',
+            github: 'https://github.com/sub1n17/mood-palette',
+            demo: 'https://mood-palette-diary.vercel.app/',
         },
     },
-
     {
         id: 'portfolio',
         title: '개인 포트폴리오 웹사이트',
         type: 'personal',
         summary: '프로젝트 구조화와 사용자 경험에 집중한 개인 포트폴리오 웹사이트',
-        thumbnail: '/images/project_p4.png',
+        thumbnail: '/images/project_p4_1.png',
         cardSkills: ['Next.js', 'TypeScript'],
         skills: [
             {
