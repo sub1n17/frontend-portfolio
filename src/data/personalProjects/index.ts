@@ -189,7 +189,7 @@ export const personalProjects = [
         title: '개인 포트폴리오 웹사이트',
         type: 'personal',
         summary: '프로젝트 구조화와 사용자 경험에 집중한 개인 포트폴리오 웹사이트',
-        thumbnail: '/images/project_p4_1.png',
+        thumbnail: '/images/project_p4.png',
         cardSkills: ['Next.js', 'TypeScript'],
         skills: [
             {
