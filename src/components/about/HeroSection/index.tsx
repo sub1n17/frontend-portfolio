@@ -8,7 +8,6 @@ export default function HeroSection() {
                 <div className={style.image_wrapper}>
                     <div className={style.profileImg}>
                         <Image src="/images/profile.jpeg" alt="프로필" fill sizes="440px"></Image>
-                        {/* <Image src="/images/project_p4.png" alt="프로필" fill></Image> */}
                     </div>
                     <div className={style.reaction}>
                         <span>💻</span>
