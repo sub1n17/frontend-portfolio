@@ -26,7 +26,13 @@ export default function ProjectDetailPage() {
                     <header className={style.detail_hero}>
                         <div className={style.thumbnail_wrapper}>
                             {project?.demo ? (
-                                <video src={project?.demo} controls autoPlay muted></video>
+                                <video
+                                    src={project?.demo}
+                                    controls
+                                    autoPlay
+                                    muted
+                                    playsInline
+                                ></video>
                             ) : (
                                 <Image
                                     src={project?.thumbnail ?? ''}
