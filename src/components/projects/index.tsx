@@ -5,7 +5,7 @@ import ProjectTabs from './ProjectTabs';
 import style from './styles.module.css';
 
 export default function ProjectsPage() {
-    const [tabActive, setTabActive] = useState('personal');
+    const [tabActive, setTabActive] = useState<'personal' | 'company'>('personal');
 
     return (
         <>

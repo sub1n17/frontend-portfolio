@@ -4,7 +4,11 @@ import Link from 'next/link';
 import style from './styles.module.css';
 import { companyProjects } from '@/src/data/companyProjects';
 
-export default function ProjectList({ tabActive }) {
+interface ProjectListProps {
+    tabActive: 'personal' | 'company';
+}
+
+export default function ProjectList({ tabActive }: ProjectListProps) {
     return (
         <>
             <div className={style.project_list}>
@@ -13,6 +17,7 @@ export default function ProjectList({ tabActive }) {
                           <Link href={`/projects/${el.id}`} key={el.id}>
                               <ProjectsCard
                                   thumbnail={el.thumbnail}
+                                  objectPosition={el.objectPosition}
                                   cardSkills={el.cardSkills}
                                   skills={el.skills}
                                   title={el.title}
@@ -26,6 +31,7 @@ export default function ProjectList({ tabActive }) {
                           <a href={el.link} target="_blank" key={el.id}>
                               <ProjectsCard
                                   thumbnail={el.thumbnail}
+                                  objectPosition={el.objectPosition}
                                   skills={el.skills}
                                   title={el.title}
                                   summary={el.summary}
