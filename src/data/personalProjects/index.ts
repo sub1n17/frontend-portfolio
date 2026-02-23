@@ -202,8 +202,8 @@ export const personalProjects = [
             },
         ],
         overview: `
-        User First'라는 핵심 가치를 바탕으로 설계한 프론트엔드 개발자 포트폴리오 사이트입니다.
-        깔끔한 UI와 직관적인 UX를 통해 그동안 진행한 프로젝트와 기술적 성장을 효과적으로 전달하도록 구성했습니다
+        React 기반으로 제작한 프론트엔드 포트폴리오 사이트입니다.
+        프로젝트별 구현 기능과 기술 스택을 정리해 한눈에 볼 수 있도록 구성했습니다.
         `,
         features: [
             {
@@ -231,7 +231,6 @@ export const personalProjects = [
         period: '2026.01 - 2026.02',
         links: {
             github: 'https://github.com/sub1n17/frontend-portfolio',
-            demo: 'https://choisubin.vercel.app/',
         },
     },
 ];

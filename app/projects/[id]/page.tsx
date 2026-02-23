@@ -112,22 +112,28 @@ export default function ProjectDetailPage() {
                             <div>
                                 <h2 className={style.content_title}>Links</h2>
                                 <div className={style.links}>
-                                    <Link
-                                        href={project?.links.github ?? ''}
-                                        className={style.btn_link}
-                                        target="_blank"
-                                    >
-                                        <span>Github</span>
-                                        <Github className={style.icon} />
-                                    </Link>
-                                    <Link
-                                        href={project?.links.demo ?? ''}
-                                        className={style.btn_link}
-                                        target="_blank"
-                                    >
-                                        <span>Live Demo</span>
-                                        <MoveUpRight className={style.icon} />
-                                    </Link>
+                                    {project?.links.github && (
+                                        <Link
+                                            href={project?.links.github}
+                                            className={style.btn_link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span>Github</span>
+                                            <Github className={style.icon} />
+                                        </Link>
+                                    )}
+                                    {project?.links.demo && (
+                                        <Link
+                                            href={project?.links.demo}
+                                            className={style.btn_link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span>Live Demo</span>
+                                            <MoveUpRight className={style.icon} />
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </div>
