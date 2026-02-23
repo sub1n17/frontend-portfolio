@@ -3,7 +3,8 @@ import style from './styles.module.css';
 
 interface ProjectsCardProps {
     thumbnail: string;
-    cardSkills: string[];
+    objectPosition?: string;
+    cardSkills?: string[];
     skills: {
         type: string;
         skill: string[];
@@ -16,6 +17,7 @@ interface ProjectsCardProps {
 
 export default function ProjectsCard({
     thumbnail,
+    objectPosition,
     cardSkills,
     skills,
     title,
@@ -33,9 +35,9 @@ export default function ProjectsCard({
                         src={thumbnail}
                         alt={title}
                         fill
-                        className={`${style.thumbnailImg} ${
-                            title.includes('장소 공유') ? style.thumbLeft : ''
-                        }`}
+                        className={style.thumbnailImg}
+                        style={{ objectPosition }}
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     ></Image>
                 </div>
                 <div className={style.overlay}>
@@ -43,7 +45,7 @@ export default function ProjectsCard({
                         <ul className={style.tech_list}>
                             {isPersonal
                                 ? // 개인 프로젝트
-                                  cardSkills.map((el: string) => (
+                                  cardSkills?.map((el: string) => (
                                       <li key={el} className={style.tech_item}>
                                           {el}
                                       </li>
