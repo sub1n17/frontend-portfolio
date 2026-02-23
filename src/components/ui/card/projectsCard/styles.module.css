@@ -41,10 +41,6 @@
     object-position: top;
 }
 
-.thumbnailImg.thumbLeft {
-    object-position: 70% center;
-}
-
 .card:hover .thumbnailImg {
     transform: scale(1.1);
 }
@@ -63,7 +59,7 @@
             rgba(0, 0, 0, 0.6) 43%,
             rgba(0, 0, 0, 0.2) 70%,
             transparent 100%);
-    z-index: 999;
+    z-index: 998;
 
 }
 
@@ -103,4 +99,5 @@
     color: rgba(255, 255, 255, 0.8);
     font-family: var(--font-es);
     line-height: 1.5;
+    word-break: keep-all;
 }

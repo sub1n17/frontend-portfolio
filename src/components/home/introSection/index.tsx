@@ -94,7 +94,7 @@ export default function IntroSection() {
                 <motion.div
                     className={style.fullWidth_wrapper}
                     initial={{
-                        width: '1200px',
+                        width: '80%',
                         borderRadius: '20px',
                         backgroundColor: '#f8f7ff',
                     }}

@@ -51,7 +51,7 @@ export default function HeroSection() {
                                     width={96}
                                     height={96}
                                 ></Image>
-                                <div className={style.folder_txt}>STEP BY STEP</div>
+                                <div className={style.folder_txt}>BETTER EXPERIENCE</div>
                             </div>
                             <div className={`${style.folder5} ${style.folder}`}>
                                 <Image
@@ -69,7 +69,7 @@ export default function HeroSection() {
                                     width={96}
                                     height={96}
                                 ></Image>
-                                <div className={style.folder_txt}>BETTER EXPERIENCE</div>
+                                <div className={style.folder_txt}>STEP BY STEP</div>
                             </div>
                             <div className={`${style.folder7} ${style.folder}`}>
                                 <Image

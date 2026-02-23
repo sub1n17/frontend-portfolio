@@ -52,3 +52,20 @@
     line-height: 1.6;
     word-break: keep-all;
 }
+
+
+@media (max-width: 768px) {
+    .secTitle {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .value_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .value_item {
+        text-align: center;
+    }
+}

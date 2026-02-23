@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--section-space) 0;
+    padding: var(--section-space) var(--space-24) 6rem;
 }
 
 .title {
@@ -167,4 +167,42 @@
 .card_item:hover .hover6 {
     left: 90%;
     transform: translateY(-35px) rotate(12deg);
+}
+
+@media (max-width: 1024px) {
+    .search_inner {
+        width: 28rem;
+    }
+
+    .hoverImg {
+        max-width: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search_wrapper {
+        width: 60%;
+    }
+
+    .search_inner {
+        width: 100%;
+    }
+
+    .hoverImg {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .search_wrapper {
+        width: 100%;
+    }
+
+    .card_wrapper {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+
 }

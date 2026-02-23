@@ -3,3 +3,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-40) var(--space-32);
 }
+
+@media (max-width: 768px) {
+    .project_list {
+        grid-template-columns: 1fr;
+    }
+}

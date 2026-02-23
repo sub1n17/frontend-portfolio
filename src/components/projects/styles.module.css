@@ -36,6 +36,16 @@
 
 .project_section {
     padding-top: var(--space-24);
+}
 
-    /* border-top: 1px solid var(--color-card-border); */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+
+    .description {
+        max-width: 80%;
+        word-break: keep-all;
+    }
 }

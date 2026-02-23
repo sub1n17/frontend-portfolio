@@ -66,3 +66,45 @@
     background: rgba(151, 146, 204, 0.1);
     border-color: var(--color-point);
 }
+
+@media (max-width: 768px) {
+    .info_item {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .label {
+        margin-bottom: var(--space-32);
+        text-align: center;
+        width: 100%;
+    }
+
+    .skill_wrapper {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .exp_content div {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .info_item {
+        padding: var(--space-60) 0;
+    }
+
+    .skill_item img {
+        max-width: 24px;
+        width: 100%;
+    }
+
+    .exp_content div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+    }
+}

@@ -10,11 +10,11 @@ export default function ContactSection() {
                 <div className={style.contact_wrapper}>
                     <Link href={'mailto:sub1n17@naver.com'} className={style.contact_item}>
                         <Mail className={style.icon} />
-                        <span>xxx@naver.com</span>
+                        <span>sub1n17@naver.com</span>
                     </Link>
                     <Link href="tel:01027779353" className={style.contact_item}>
                         <Phone className={style.icon} />
-                        <span>010-xxxx-xxxx</span>
+                        <span>010-2777-9353</span>
                     </Link>
                     <Link
                         href="https://github.com/sub1n17"

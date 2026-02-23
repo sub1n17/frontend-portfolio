@@ -14,7 +14,6 @@
     align-items: center;
     padding-bottom: var(--space-32);
     gap: var(--space-32);
-
 }
 
 
@@ -50,18 +49,18 @@
 }
 
 .folder1 {
-    top: -180px;
-    right: 135px;
+    top: -150px;
+    right: 130px;
 }
 
 .folder2 {
-    top: -70px;
+    top: -65px;
     left: -15px;
 }
 
 .folder3 {
-    top: -110px;
-    right: -25px;
+    top: -100px;
+    right: -20px;
 }
 
 .folder4 {
@@ -70,18 +69,18 @@
 }
 
 .folder5 {
-    top: 85px;
-    right: 45px;
+    top: 140px;
+    right: -60px;
 }
 
 .folder6 {
-    bottom: -40px;
-    left: -65px;
+    bottom: -3px;
+    left: -75px;
 }
 
 .folder7 {
-    bottom: 50px;
-    right: -75px;
+    bottom: 28px;
+    right: -78px;
 }
 
 .folder8 {
@@ -101,4 +100,127 @@
     margin-top: 1rem;
     color: rgba(0, 0, 0, 0.6);
     text-align: center;
+}
+
+
+/* 반응형 */
+@media (max-width: 1280px) {
+    .title {
+        font-size: 6rem;
+    }
+
+    .folder4 {
+        top: 110px;
+        left: -197px;
+    }
+
+    .folder6 {
+        bottom: -37px;
+        left: -147px;
+    }
+
+    .folder5 {
+        top: 83px;
+        right: -82px;
+    }
+
+    .folder7 {
+        bottom: 28px;
+        right: -130px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 4.5rem;
+        max-width: 600px;
+    }
+
+    .folder {
+        transform: scale(0.8);
+    }
+
+    .folder4 {
+        top: 65px;
+        left: -144px;
+    }
+
+    .folder6 {
+        bottom: -75px;
+        left: -142px;
+    }
+
+    .folder5 {
+        top: 48px;
+        right: -91px;
+    }
+
+    .folder7 {
+        bottom: -23px;
+        right: -130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_inner {
+        padding-bottom: 0;
+    }
+
+    .title {
+        font-size: 3rem;
+        max-width: 90%;
+    }
+
+    .summary {
+        padding: 0 var(--space-16);
+    }
+
+    .folder {
+        transform: scale(0.7);
+    }
+
+    .folder3,
+    .folder4,
+    .folder5 {
+        display: none;
+    }
+
+    .folder1 {
+        top: -140px;
+        right: 50px;
+    }
+
+    .folder2 {
+        top: -80px;
+        left: 10px;
+    }
+
+    .folder6 {
+        bottom: -120px;
+        left: 50px;
+        right: 0;
+    }
+
+    .folder7 {
+        right: 10px;
+        bottom: 0;
+        top: -75px;
+    }
+
+    .folder8 {
+        bottom: -105px;
+        left: auto;
+        right: 25px
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .summary {
+        max-width: 70%;
+        margin: 0 auto;
+        word-break: keep-all;
+        margin-top: 0.5rem;
+    }
 }
