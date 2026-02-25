@@ -9,12 +9,21 @@ export default function InfoSection() {
                     <div className={style.label}>Experience</div>
                     <div className={style.exp_content}>
                         <div>
+                            <span className={style.period}>2025.03 - 2025.06</span>선영디자인 | 웹
+                            퍼블리셔
+                        </div>
+                    </div>
+                </div>
+                <div className={style.info_item}>
+                    <div className={style.label}>Education</div>
+                    <div className={style.exp_content}>
+                        <div>
                             <span className={style.period}>2025.07 - 2025.12</span> 코드캠프
-                            프론트엔드 과정 온라인 교육
+                            프론트엔드 개발 부트캠프 이수
                         </div>
                         <div>
-                            <span className={style.period}>2023.05 - 2024.10</span> 그린아카데미
-                            퍼블리셔 양성 교육
+                            <span className={style.period}>2024.05 - 2024.10</span> 그린아카데미
+                            UI/UX 웹 퍼블리셔 과정 수료
                         </div>
                     </div>
                 </div>

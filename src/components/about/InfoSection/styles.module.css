@@ -23,6 +23,10 @@
     font-weight: var(--weight-500);
 }
 
+.exp_content div:last-child {
+    margin-bottom: 0;
+}
+
 .period {
     color: var(--color-point);
     margin-right: var(--space-12);
