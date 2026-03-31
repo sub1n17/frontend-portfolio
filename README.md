@@ -28,7 +28,7 @@ Next.js와 TypeScript 기반으로 구현한 개인 포트폴리오 웹사이트
 - **About Page**  
   기술 스택 및 자기소개
 
-## 📌 주요 구현 기능
+## 📌 Key Features
 
 - Dynamic Route(`[id]`)를 활용한 프로젝트 상세 페이지 구현
 - 반응형 레이아웃 구현
