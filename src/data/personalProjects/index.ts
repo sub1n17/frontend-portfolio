@@ -1,5 +1,73 @@
 export const personalProjects = [
     {
+        id: 'coin-trade-log',
+        title: '코인 거래 일지',
+        type: 'personal',
+        summary: 'Upbit API 기반 코인 거래 기록 및 수익률 분석 서비스',
+        thumbnail: '/images/project_p5_1.png',
+        demo: '/videos/demo_coin.mp4',
+        cardSkills: ['Next.js', 'TypeScript', 'React Query'],
+        skills: [
+            {
+                type: 'Skills',
+                skill: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript'],
+            },
+            {
+                type: 'Tools & Frameworks',
+                skill: [
+                    'Next.js',
+                    'React Query',
+                    'Supabase',
+                    'Recharts',
+                    'Upbit API',
+                    'Tailwind CSS',
+                    'shadcn/ui',
+                    'Vercel',
+                ],
+            },
+        ],
+        overview: `
+            코인 거래 내역을 기록하고 수익률을 분석할 수 있는 서비스입니다.
+            Upbit REST API를 연동해 현재 시세를 자동 갱신하고,
+            Supabase로 DB를 설계해 거래 데이터를 관리했습니다.`,
+        features: [
+            {
+                title: '수익률 요약 대시보드',
+                desc: [
+                    '보유 코인별 평가금액·수익률을 카드 형태로 시각화',
+                    '코인별 수익률 막대 차트 제공',
+                ],
+            },
+            {
+                title: '실시간 시세 연동',
+                desc: [
+                    'Upbit REST API를 연동하여 현재가 실시간 폴링',
+                    'React Query의 refetchInterval을 활용한 자동 갱신 처리',
+                ],
+            },
+            {
+                title: '거래 기록 관리',
+                desc: [
+                    '코인 거래 내역 등록·수정·삭제 CRUD 구현',
+                    'Supabase DB를 설계하여 거래 데이터 저장 및 조회',
+                ],
+            },
+            {
+                title: '코인 검색 및 상세',
+                desc: [
+                    'Upbit API 기반 코인 목록 검색 및 상세 페이지 제공',
+                    '30일 가격 추이 차트로 시세 흐름 시각화',
+                ],
+            },
+        ],
+        role: '프론트엔드 개발',
+        period: '2026.03',
+        links: {
+            github: 'https://github.com/sub1n17/coin-tradelog',
+            demo: 'https://coin-tradelog.vercel.app/',
+        },
+    },
+    {
         id: 'stay-market-web',
         title: '숙박권 거래 플랫폼 (Web)',
         type: 'personal',
@@ -182,55 +250,6 @@ export const personalProjects = [
         links: {
             github: 'https://github.com/sub1n17/mood-palette',
             demo: 'https://mood-palette-diary.vercel.app/',
-        },
-    },
-    {
-        id: 'portfolio',
-        title: '개인 포트폴리오 웹사이트',
-        type: 'personal',
-        summary: '프로젝트 구조화와 사용자 경험에 집중한 개인 포트폴리오 웹사이트',
-        thumbnail: '/images/project_p4.png',
-        cardSkills: ['Next.js', 'TypeScript'],
-        skills: [
-            {
-                type: 'Skills',
-                skill: ['HTML', 'CSS', 'JavaScript', 'LocalStorage'],
-            },
-            {
-                type: 'Tools & Frameworks',
-                skill: ['Next.js, Vercel'],
-            },
-        ],
-        overview: `
-        React 기반으로 제작한 프론트엔드 포트폴리오 사이트입니다.
-        프로젝트별 구현 기능과 기술 스택을 정리해 한눈에 볼 수 있도록 구성했습니다.
-        `,
-        features: [
-            {
-                title: 'Main',
-                desc: ['개발자로서 지향하는 가치를 담은 메인 비주얼 구성'],
-            },
-            {
-                title: 'Projects',
-                desc: ['개인·실무 프로젝트를 탭 메뉴로 분류한 아카이빙'],
-            },
-            {
-                title: 'Project Detail',
-                desc: ['프로젝트 데이터를 기반으로 상세 페이지 렌더링'],
-            },
-            {
-                title: 'About',
-                desc: ['개발자로서의 가치관, 교육 및 경험, 역량을 포함한 자기소개'],
-            },
-            {
-                title: '반응형 최적화',
-                desc: ['PC부터 모바일 환경을 고려한 디바이스별 레이아웃 대응'],
-            },
-        ],
-        role: '기획 · 디자인 · 프론트엔드 개발',
-        period: '2026.01 - 2026.02',
-        links: {
-            github: 'https://github.com/sub1n17/frontend-portfolio',
         },
     },
 ];
