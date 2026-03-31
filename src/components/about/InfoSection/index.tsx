@@ -58,6 +58,25 @@ export default function InfoSection() {
                                 ></Image>
                                 <p>TypeScript</p>
                             </div>
+
+                            <div className={style.skill_item}>
+                                <Image
+                                    src={'/icons/tanstack.png'}
+                                    alt="GraphQL"
+                                    width={32}
+                                    height={32}
+                                ></Image>
+                                <p>TanStack Query</p>
+                            </div>
+                            <div className={style.skill_item}>
+                                <Image
+                                    src={'/icons/supabase.svg'}
+                                    alt="GraphQL"
+                                    width={32}
+                                    height={32}
+                                ></Image>
+                                <p>Supabase</p>
+                            </div>
                             <div className={style.skill_item}>
                                 <Image
                                     src={'/icons/GraphQL.svg'}
